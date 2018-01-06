@@ -1,0 +1,28 @@
+{
+  "name": "tradebot",
+  "version": "1.0.0",
+  "description": "Buy and sell automatic bitcoin",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "foxbit",
+    "bitcoin",
+    "btc",
+    "blinktrade",
+    "trade",
+    "brazil"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blinktrade": "0.0.14",
+    "dateformat": "^2.0.0",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "open": "0.0.5"
+  },
+  "devDependencies": {}
+}
