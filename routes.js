@@ -36,13 +36,17 @@ module.exports = [
   handler: function (request, reply) {
     var BRL_locked = "";
     var BTC_locked = "";
+    var CLP_locked = "";
+    if (variables.infoBalance.CLP_locked > 0) {
+    	BRL_locked = "-"+parseFloat(variables.infoBalance.CLP_locked / 1e8).toFixed(8);
+    	}
     if (variables.infoBalance.BRL_locked > 0) {
     	BRL_locked = "-"+parseFloat(variables.infoBalance.BRL_locked / 1e8).toFixed(2);
     	}
     if (variables.infoBalance.BTC_locked > 0) {
     	BTC_locked = "-"+parseFloat(variables.infoBalance.BTC_locked / 1e8).toFixed(8);
     	}
-    reply(JSON.stringify({ BRL: parseFloat(variables.infoBalance.BRL / 1e8).toFixed(2)+BRL_locked, BTC: parseFloat(variables.infoBalance.BTC / 1e8).toFixed(8)+BTC_locked, ClientID: variables.ClientID })).code(200).type('application/json').header('Connection', 'keep-alive').header('Cache-Control', 'no-cache');
+    reply(JSON.stringify({ CLP: parseFloat(variables.infoBalance.CLP / 1e8).toFixed(2)+CLP_locked, BRL: parseFloat(variables.infoBalance.BRL / 1e8).toFixed(2)+BRL_locked, BTC: parseFloat(variables.infoBalance.BTC / 1e8).toFixed(8)+BTC_locked, ClientID: variables.ClientID })).code(200).type('application/json').header('Connection', 'keep-alive').header('Cache-Control', 'no-cache');
   } 
 },
 {

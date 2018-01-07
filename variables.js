@@ -30,5 +30,5 @@ exports.TradeLimits = {
               				amount: 0.0
 						}
 					 };
-exports.infoBalance = {BRL: 0,BTC: 0,BRL_locked: 0,BTC_locked: 0};
+exports.infoBalance = {CLP: 0,BRL: 0,BTC: 0,BRL_locked: 0,BTC_locked: 0};
 

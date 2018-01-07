@@ -70,6 +70,14 @@
                             <p class="right" id="brl-balance"><strong></strong></p>
                         </div>
                     </div>
+                     <div class="row">
+                        <div class="col-lg-4">
+                            <p>CLP</p>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="right" id="clp-balance"><strong></strong></p>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-4">
                             <p>ClientID</p>
@@ -344,6 +352,7 @@
             function(data){
                 $('#btc-balance').html(data.BTC);
 				$('#brl-balance').html(data.BRL);
+				$('#clp-balance').html(data.CLP);
 				$('#ClientID').html(data.ClientID);
 
         }).always(function(data,status) {
